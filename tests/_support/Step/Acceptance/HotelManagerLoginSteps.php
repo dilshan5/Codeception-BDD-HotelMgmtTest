@@ -12,7 +12,7 @@ class HotelManagerLoginSteps extends \AcceptanceTester
     public function iTypeEmailAs($userName)
     {
         $I = $this;
-        $I->fillField(HotelManagerLoginPage::$emailTextField, $userName);
+        $I->fillField(HotelManagerLoginPage::$emailTextField, $userName); //enter email
     }
 
     /**
@@ -21,7 +21,7 @@ class HotelManagerLoginSteps extends \AcceptanceTester
     public function iTypePasswordAs($password)
     {
         $I = $this;
-        $I->fillField(HotelManagerLoginPage::$passwordTextField, $password);
+        $I->fillField(HotelManagerLoginPage::$passwordTextField, $password);//enter password
     }
 
     /**
@@ -30,6 +30,8 @@ class HotelManagerLoginSteps extends \AcceptanceTester
     public function iShouldSeeErrorMessageAs($errorType, $errorMessage)
     {
         $I = $this;
+
+        //Verify the error message for invalid email,password and invalid credentials
         if ($errorType == 'password')
             $I->seeElement(HotelManagerLoginPage::$passwordErrorMessage);
         elseif ($errorType == 'email')
@@ -37,6 +39,7 @@ class HotelManagerLoginSteps extends \AcceptanceTester
         else
             $I->seeElement(HotelManagerLoginPage::$generalErrorMessage);
 
+        //verify the error message
         $I->see($errorMessage);
     }
 

@@ -13,7 +13,7 @@ class HotelManagerProSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->click(HotelManagerProPage::$proLink);
-        $I->seeCurrentUrlEquals(HotelManagerProPage::$URL);
+        $I->seeCurrentUrlEquals(HotelManagerProPage::$URL);//verify the browser url
     }
 
     /**
@@ -23,9 +23,9 @@ class HotelManagerProSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->waitForElementVisible(HotelManagerProPage::$videoFrame, 2);
-        $I->moveMouseOver(HotelManagerProPage::$videoFrame);
-        $I->canSeeElement(HotelManagerProPage::$uTubeVideoLink);
-        $I->click(HotelManagerProPage::$closeVideo);
+        $I->moveMouseOver(HotelManagerProPage::$videoFrame);//mouse hover over the video frame
+        $I->canSeeElement(HotelManagerProPage::$uTubeVideoLink); //verify the utube video
+        $I->click(HotelManagerProPage::$closeVideo);//close the video
     }
 
     /**
@@ -43,9 +43,9 @@ class HotelManagerProSteps extends \AcceptanceTester
     public function iSearchAsAHotelNameAndSelectThHotel($hotelName, $selector)
     {
         $I = $this;
-        $I->fillField(HotelManagerProPage::$hotelNameTextField, $hotelName);
+        $I->fillField(HotelManagerProPage::$hotelNameTextField, $hotelName);//enter hotel name
         $I->waitForElementVisible(HotelManagerProPage::$autocompletionDropdown, 5); // secs
-        $I->click('ul.hotel-search__list.js-hotel-search-results li:nth-child(' . $selector . ')');
+        $I->click('ul.hotel-search__list.js-hotel-search-results li:nth-child(' . $selector . ')');//select the hotel
     }
 
     /**
@@ -73,7 +73,7 @@ class HotelManagerProSteps extends \AcceptanceTester
     public function iCheckTheConfirmationMessage()
     {
         $I = $this;
-        $I->waitForElementVisible(HotelManagerProPage::$successMessage, 10);
+        $I->waitForElementVisible(HotelManagerProPage::$successMessage, 10);//wait until success message appear
         $I->see('Thank you for your request! We\'ll get in touch with you shortly.');
     }
 

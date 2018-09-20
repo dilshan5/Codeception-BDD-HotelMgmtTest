@@ -14,7 +14,7 @@ class HotelManagerRegistrationSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->seeCurrentUrlEquals(HotelManagerRegistrationPage::$URL);
-        $I->seeElement(HotelManagerRegistrationPage::$regiterForm);
+        $I->seeElement(HotelManagerRegistrationPage::$regiterForm);//check the submit form
         $I->seeCurrentUrlEquals(HotelManagerRegistrationPage::$URL);
 
     }
@@ -25,7 +25,7 @@ class HotelManagerRegistrationSteps extends \AcceptanceTester
     public function iSearchForAsAHotelName($hotelName)
     {
         $I = $this;
-        $I->fillField(HotelManagerRegistrationPage::$hotelNameTextField, $hotelName);
+        $I->fillField(HotelManagerRegistrationPage::$hotelNameTextField, $hotelName);//enter hotel name
     }
 
     /**

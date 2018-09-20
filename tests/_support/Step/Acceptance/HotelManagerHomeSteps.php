@@ -13,8 +13,8 @@ class HotelManagerHomeSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->amGoingTo('Open Home page');
-        $I->amOnPage(HotelManagerHomePage::$URL);
-        $I->seeInTitle(HotelManagerHomePage::$pageTitle);
+        $I->amOnPage(HotelManagerHomePage::$URL); //check the browser url
+        $I->seeInTitle(HotelManagerHomePage::$pageTitle);//check the browser title
 
     }
 
@@ -24,7 +24,7 @@ class HotelManagerHomeSteps extends \AcceptanceTester
     public function iNavigateToPage($arg1)
     {
         $I = $this;
-        $I->click($arg1);
+        $I->click($arg1); //click anything that is clickable on the webpage
     }
 
 }

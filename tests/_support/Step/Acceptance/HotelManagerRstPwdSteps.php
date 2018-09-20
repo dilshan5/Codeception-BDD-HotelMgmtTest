@@ -20,7 +20,7 @@ class HotelManagerRstPwdSteps extends \AcceptanceTester
     public function iVerifyRequestHasBeenSentSuccessfully()
     {
         $I = $this;
-        $I->waitForElementVisible(HotelManagerRstPwdPage::$alertMessageContainer, 5);
+        $I->waitForElementVisible(HotelManagerRstPwdPage::$alertMessageContainer, 5);//wait until request to be success
         $I->see('Password reset e-mail sent.');
     }
 
