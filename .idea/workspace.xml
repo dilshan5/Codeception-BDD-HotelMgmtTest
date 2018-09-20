@@ -191,6 +191,11 @@
               <item name="Codeception-BDD-HotelMgmtTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="Codeception-BDD-HotelMgmtTest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Codeception-BDD-HotelMgmtTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codeception-BDD-HotelMgmtTest" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -237,12 +242,12 @@
       <workItem from="1537367790543" duration="19000" />
       <workItem from="1537368356919" duration="3662000" />
       <workItem from="1537382266773" duration="5000" />
-      <workItem from="1537418674550" duration="816000" />
+      <workItem from="1537418674550" duration="1428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58105000" />
+    <option name="totallyTimeSpent" value="58717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />

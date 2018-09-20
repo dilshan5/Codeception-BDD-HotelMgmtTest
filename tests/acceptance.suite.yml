@@ -1,0 +1,28 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: AcceptanceTester
+modules:
+  enabled:
+  - WebDriver:
+      url: 'https://www.trivago.com'
+      window_size: maximize # disabled in ChromeDriver
+      browser: chrome
+      restart: true # Use a new browser window for each test (to isolate test cases from each other)
+      clear_cookies: true
+      pageload_timeout: 600
+      capabilities:
+        platform: 'Windows 10'
+        unexpectedAlertBehaviour: 'accept'
+  - \Helper\Acceptance
+extensions:
+  enabled:
+  - Codeception\Extension\Recorder:
+      delete_successful: false # keep screenshots of successful tests
+      ignore_steps: [have, grab*]
+  - Codeception\Extension\RunProcess:
+      0: java -jar ~/selenium-server-standalone.jar
+      1: chromedriver
