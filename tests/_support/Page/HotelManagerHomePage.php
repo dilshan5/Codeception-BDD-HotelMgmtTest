@@ -1,4 +1,5 @@
 <?php
+
 namespace Page;
 
 class HotelManagerHomePage

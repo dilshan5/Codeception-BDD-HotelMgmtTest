@@ -1,4 +1,5 @@
 <?php
+
 namespace Page;
 
 class HotelManagerRegistrationPage
@@ -18,5 +19,5 @@ class HotelManagerRegistrationPage
     public static $emailAddress = 'RegistrationForm[personalData][email]';
     public static $userPassword = 'RegistrationForm[personalData][password]';
     public static $checkTerms = 'RegistrationForm[personalData][terms]';
-    public static $submitButton= 'Create your free account';
+    public static $submitButton = 'Create your free account';
 }
