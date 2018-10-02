@@ -47,12 +47,6 @@ Feature: HotelManager
     And I click "Log in" button
     Then I should see "password" error message as "This field is required"
 
-  Scenario: Hotel Manager - Verify Forgot your passowrd link.
-    Given I am on Hotel Manager home page
-    When I navigate to "Sign in" page
-    And I click "Forgot your password?" button
-    Then I type email as "test@trivago.com"
-
   Scenario: Hotel Manager - Verify Forgot your password link.
     Given I am on Hotel Manager home page
     When I navigate to "Sign in" page

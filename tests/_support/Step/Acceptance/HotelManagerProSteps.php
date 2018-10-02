@@ -22,7 +22,7 @@ class HotelManagerProSteps extends \AcceptanceTester
     public function iVerifyButton($arg1)
     {
         $I = $this;
-        $I->waitForElementVisible(HotelManagerProPage::$videoFrame, 2);
+        $I->waitForElementVisible(HotelManagerProPage::$videoFrame, 5);
         $I->moveMouseOver(HotelManagerProPage::$videoFrame);//mouse hover over the video frame
         $I->canSeeElement(HotelManagerProPage::$uTubeVideoLink); //verify the utube video
         $I->click(HotelManagerProPage::$closeVideo);//close the video
@@ -73,7 +73,7 @@ class HotelManagerProSteps extends \AcceptanceTester
     public function iCheckTheConfirmationMessage()
     {
         $I = $this;
-        $I->waitForElementVisible(HotelManagerProPage::$successMessage, 10);//wait until success message appear
+        $I->waitForElementVisible(HotelManagerProPage::$successMessage, 15);//wait until success message appear
         $I->see('Thank you for your request! We\'ll get in touch with you shortly.');
     }
 
