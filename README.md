@@ -3,7 +3,7 @@ Codeception is a framework written in PHP for testing application and its multi-
 
 # To run the code,
 
-Excute folloeing command,
+Excute following command,
     
     composer require codeception/codeception
 
